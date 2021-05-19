@@ -394,4 +394,4 @@ bot.on('message', async message => {
     }
 });*/
 
-bot.login('NDY3OTg2MjczNDc1MzYyODI4.Xk6vDQ.JaEcx0tnqI4Z4IAUQdOIkbxSbiw');
+bot.login(require('./token.json').token);
