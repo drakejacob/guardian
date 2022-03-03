@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 //Skapar boten
 const Discord = require('discord.js');
 const bot = new Discord.Client();
@@ -384,14 +386,4 @@ bot.on('message', async message => {
     }
 });
 
-/*bot.on('voiceStateUpdate', async (oldMember, newMember) => {
-    if (newMember.id == '309777241674350596') {
-        if (oldMember.voice.channel === undefined && newMember.voice.channel !== undefined) {
-            randomTime = Math.floor(Math.random() * 180000);
-            await new Promise(t => setTimeout(t, randomTime));
-            newMember.setVoice.channel(null);
-        }
-    }
-});*/
-
-bot.login(require('./token.json').token);
+bot.login(process.env.TOKEN);
