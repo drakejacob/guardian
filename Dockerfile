@@ -1,4 +1,4 @@
-FROM node:17-alpine
+FROM node:17-buster
 
 WORKDIR /app
 
@@ -6,4 +6,4 @@ COPY . .
 
 RUN npm install
 
-RUN node .
+CMD ["node", "."]
